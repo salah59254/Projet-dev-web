@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉléganceParfumée - Parfums de Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">ÉléganceParfumée</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./projetdev.html" class="active">Accueil</a></li>
+      <li><a href="produit.html">Collections</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="panier.html" class="cart-icon">🛒 <span class="cart-count" id="cartCount">0</span></a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">2026 — Collection Exclusive</p>
+      <h1>L'Art de la<br><em>Parfumerie de Luxe</em></h1>
+      <p class="hero-desc">Découvrez notre sélection exclusive des plus grandes marques de parfums</p>
+      <a href="produit.html" class="btn-primary">Explorer la Collection</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section-intro">
+    <div class="intro-label">Notre Sélection</div>
+    <h2>Les plus belles fragrances du marché</h2>
+    <span class="year-badge">2026</span>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise container">
+    <div class="expertise-text">
+      <h2>Notre Expertise</h2>
+      <p>Élégance Parfumée vous propose une sélection rigoureuse des plus belles fragrances de luxe. Notre équipe d'experts sélectionne pour vous les parfums les plus emblématiques et les dernières nouveautés des grandes maisons. Nous négocions directement avec les marques pour vous offrir les meilleurs prix sans compromis sur l'authenticité et la qualité.</p>
+      <div class="expertise-cards">
+        <div class="exp-card">
+          <div class="exp-icon">✦</div>
+          <h4>Authenticité Garantie</h4>
+          <p>Tous nos parfums sont 100% authentiques, sourcés directement auprès des marques et distributeurs agréés.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">◈</div>
+          <h4>Prix Imbattables</h4>
+          <p>Nous vous offrons les meilleurs prix sur les parfums de luxe grâce à nos relations privilégiées avec les fournisseurs.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">❋</div>
+          <h4>Cadeaux Exclusifs</h4>
+          <p>Pour chaque commande, recevez des échantillons gratuits et un emballage cadeau premium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section class="engagement">
+    <div class="container engagement-inner">
+      <div class="engagement-quote">
+        <blockquote>"Nous croyons que chaque personne mérite de trouver le parfum qui lui ressemble, celui qui deviendra sa signature olfactive."</blockquote>
+        <cite>— L'équipe Élégance Parfumée</cite>
+      </div>
+      <div class="engagement-img">
+        <div class="img-placeholder">
+          <div class="img-icon">🏛️</div>
+          <p>Notre Magasin</p>
+          <small>Revendeur Agréé depuis Janvier 2025</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats container">
+    <div class="stat">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">Marques de luxe disponibles</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Clients satisfaits</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">24h</span>
+      <span class="stat-label">Livraison express</span>
+    </div>
+  </section>
+
+  <!-- GARANTIES -->
+  <section class="garanties container">
+    <h3>Nos Garanties Exclusives</h3>
+    <div class="garanties-grid">
+      <div class="garantie-item">
+        <div class="g-icon">🔐</div>
+        <h5>Authenticité 100%</h5>
+        <p>Tous nos parfums sont certifiés authentiques, directement issus des maisons de parfums ou de leurs distributeurs officiels.</p>
+      </div>
+      <div class="garantie-item">
+        <div class="g-icon">💳</div>
+        <h5>Paiement Sécurisé</h5>
+        <p>Transactions cryptées et protégées avec les normes bancaires les plus strictes.</p>
+      </div>
+      <div class="garantie-item">
+        <div class="g-icon">↩️</div>
+        <h5>Retour Facile</h5>
+        <p>30 jours pour changer d'avis — Retours gratuits en cas de non-satisfaction.</p>
+      </div>
+      <div class="garantie-item">
+        <div class="g-icon">📦</div>
+        <h5>Livraison Protégée</h5>
+        <p>Emballage renforcé et assurance incluse contre tout dommage pendant le transport.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="bestsellers">
+    <div class="container">
+      <h2>Nos meilleurs parfums</h2>
+      <p class="section-sub">Les fragrances préférées de nos clients</p>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder" style="background:linear-gradient(135deg,#d0e8f8,#4080b0)">
+              <span class="perfume-emoji"><img src="./SAUVAGE.jpg" alt="" style="width: 100%;height: 200px;object-fit: cover;"></span>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="brand">Dior</div>
+            <h3>Dior Sauvage</h3>
+            <div class="stars">★★★★★ <span>(428 avis)</span></div>
+            <p>Un parfum frais et épicé qui allie bergamote de Calabre et poivre de Sichuan.</p>
+            <div class="tags"><span>Bergamote</span><span>Poivre</span><span>Boisée</span></div>
+            <div class="price-row">
+              <span class="price">9 900 DA</span>
+              <span class="price-old">12 000 DA</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Dior Sauvage', 9900)">Ajouter au panier</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder" style="background:linear-gradient(135deg,#c9a96e,#f5e6c8)">
+              <span class="perfume-emoji"><img src="./CRISTALE.jpg" alt="" style="width: 100%;height: 200px;object-fit: cover;"></span>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="brand">Chanel</div>
+            <h3>Coco Mademoiselle</h3>
+            <div class="stars">★★★★★ <span>(512 avis)</span></div>
+            <p>Un bouquet floral-oriental avec des notes de rose et de jasmin.</p>
+            <div class="tags"><span>Orange</span><span>Rose</span><span>Patchouli</span></div>
+            <div class="price-row">
+              <span class="price">11 500 DA</span>
+              <span class="price-old">14 000 DA</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Coco Mademoiselle', 11500)">Ajouter au panier</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder" style="background:linear-gradient(135deg,#e8d5c4,#c4a882)">
+              <span class="perfume-emoji"><img src="./CLOE.jpg" alt="" style="width: 100%;height: 200px;object-fit: cover;"></span>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="brand">Kayali</div>
+            <h3>Kayali</h3>
+            <div class="stars">★★★★☆ <span>(387 avis)</span></div>
+            <p>Des Parfums qui osent, charment et fascinent.</p>
+            <div class="tags"><span>Pomme</span><span>Muguet</span><span>Vanille</span></div>
+            <div class="price-row">
+              <span class="price">8 900 DA</span>
+              <span class="price-old">11 000 DA</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Kayali', 8900)">Ajouter au panier</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="center-btn">
+        <a href="produit.html" class="btn-outline">Découvrir toute la collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services container">
+    <h2>Nos Services Exclusifs</h2>
+    <p class="section-sub">Découvrez ce qui rend notre expérience unique</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="s-icon">💬</div>
+        <h4>Conseil Personnalisé</h4>
+        <p>Nos experts vous guident pour trouver le parfum qui correspond à votre personnalité.</p>
+      </div>
+      <div class="service-item">
+        <div class="s-icon">🎁</div>
+        <h4>Emballage Cadeau</h4>
+        <p>Un emballage luxueux offert pour chaque commande, parfait pour les cadeaux.</p>
+      </div>
+      <div class="service-item">
+        <div class="s-icon">🚚</div>
+        <h4>Livraison Rapide</h4>
+        <p>Expédition le jour même pour toute commande passée avant 14h.</p>
+      </div>
+      <div class="service-item">
+        <div class="s-icon">⭐</div>
+        <h4>Programme Fidélité</h4>
+        <p>Cumulez des points à chaque achat pour obtenir des avantages exclusifs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h4>ÉléganceParfumée</h4>
+        <p>Maison de parfums de luxe depuis 2025</p>
+      </div>
+      <div class="footer-col">
+        <h4>À propos</h4>
+        <p>Élégance Parfumée : luxe, performance et expérience utilisateur optimisée.</p>
+        <a href="apropos.html">En savoir plus →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Bd Khaled Khodja, Tizi Ouzou</p>
+        <p>Éléganceparfumée@gmail.com</p>
+        <p>+213 793 56 64 68</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Élégance Parfumée. Tous droits réservés.</div>
+  </footer>
+
+  <script src="./projetdev.js"></script>
+</body>
+</html>

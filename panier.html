@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panier - ÉléganceParfumée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="./projetdev.html class="logo">ÉléganceParfumée</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./projetdev.html">Accueil</a></li>
+      <li><a href="produit.html">Collections</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="panier.html" class="cart-icon">🛒 <span class="cart-count" id="cartCount">0</span></a>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Mon Panier</h1>
+    <p>Votre sélection de fragrances de luxe</p>
+  </section>
+
+  <section class="panier-section container">
+    <div id="cartEmpty" style="text-align:center;padding:5rem 0">
+      <div style="font-size:5rem">🛒</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;margin:1rem 0">Votre panier est vide</h3>
+      <p>Découvrez notre sélection de parfums de luxe.</p>
+      <a href="produit.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block">Voir la Collection</a>
+    </div>
+    <div id="cartContent" style="display:none">
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary">
+        <h3>Résumé de la commande</h3>
+        <div class="summary-row"><span>Sous-total</span><span id="subtotal">0 DA</span></div>
+        <div class="summary-row"><span>Livraison</span><span>Gratuite</span></div>
+        <div class="summary-row total-row"><span>Total</span><span id="total">0 DA</span></div>
+        <button class="btn-primary" style="width:100%;margin-top:1rem" onclick="checkout()">Commander</button>
+        <a href="produit.html" class="btn-outline" style="width:100%;margin-top:0.75rem;display:block;text-align:center;box-sizing:border-box">Continuer les achats</a>
+        <div id="orderSuccess" style="display:none;color:#c9a96e;margin-top:1rem;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic">
+          ✓ Commande confirmée ! Nous vous contacterons bientôt.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col"><h4>ÉléganceParfumée</h4><p>Maison de parfums de luxe depuis 2025</p></div>
+      <div class="footer-col"><h4>À propos</h4><p>Élégance Parfumée : luxe, performance et expérience utilisateur optimisée.</p><a href="apropos.html">En savoir plus →</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>Bd Khaled Khodja, Tizi Ouzou</p><p>Éléganceparfumée@gmail.com</p><p>+213 793 56 64 68</p></div>
+    </div>
+    <div class="footer-bottom">© 2025 Élégance Parfumée. Tous droits réservés.</div>
+  </footer>
+
+  <script src="projetdev.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', renderCart);
+
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const empty = document.getElementById('cartEmpty');
+      const content = document.getElementById('cartContent');
+      const items = document.getElementById('cartItems');
+      if (cart.length === 0) { empty.style.display = 'block'; content.style.display = 'none'; return; }
+      empty.style.display = 'none'; content.style.display = 'flex';
+      let html = '', total = 0;
+      cart.forEach((item, i) => {
+        total += item.price * item.qty;
+        html += `<div class="cart-item">
+          <div class="ci-emoji">🌸</div>
+          <div class="ci-info"><h4>${item.name}</h4><p>${item.price.toLocaleString()} DA × ${item.qty}</p></div>
+          <div class="ci-actions">
+            <button class="qty-btn" onclick="updateCartQty(${i},-1)">−</button>
+            <span class="qty">${item.qty}</span>
+            <button class="qty-btn" onclick="updateCartQty(${i},1)">+</button>
+            <button class="remove-btn" onclick="removeFromCart(${i})">✕</button>
+          </div>
+          <div class="ci-price">${(item.price * item.qty).toLocaleString()} DA</div>
+        </div>`;
+      });
+      items.innerHTML = html;
+      document.getElementById('subtotal').textContent = total.toLocaleString() + ' DA';
+      document.getElementById('total').textContent = total.toLocaleString() + ' DA';
+    }
+
+    function updateCartQty(i, d) {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart[i].qty += d;
+      if (cart[i].qty <= 0) cart.splice(i, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart(); updateCartCount();
+    }
+
+    function removeFromCart(i) {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart.splice(i, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart(); updateCartCount();
+    }
+
+    function checkout() {
+      document.getElementById('orderSuccess').style.display = 'block';
+      setTimeout(() => { localStorage.removeItem('cart'); renderCart(); updateCartCount(); }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos - ÉléganceParfumée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./projetdev.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="./projetdev.html" class="logo">ÉléganceParfumée</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./projetdev.html">Accueil</a></li>
+      <li><a href="produit.html">Collections</a></li>
+      <li><a href="apropos.html" class="active">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="panier.html" class="cart-icon">🛒 <span class="cart-count" id="cartCount">0</span></a>
+  </nav>
+
+  <section class="page-hero">
+    <h1>L'Art de la Parfumerie</h1>
+    <p>Découvrez l'histoire et la passion qui se cachent derrière chaque flacon de notre sélection exclusive</p>
+    <a href="#histoire" class="btn-outline" style="margin-top:1.5rem;display:inline-block">Explorer notre histoire</a>
+  </section>
+
+  <section class="apropos-passion container" id="histoire">
+    <div class="ap-text">
+      <h2>Notre Passion</h2>
+      <p>Fondée en Janvier 2025, ÉléganceParfumée est née d'une passion commune pour les parfums d'exception. Notre mission est simple : rendre accessibles les plus belles fragrances de luxe, tout en garantissant leur authenticité et une expérience d'achat inégalée.</p>
+      <p>Nous collaborons directement avec les plus grandes maisons de parfums et leurs distributeurs officiels pour vous proposer une sélection rigoureuse.</p>
+      <p>Notre équipe d'experts parcourt le monde pour dénicher les parfums les plus emblématiques comme les plus rares, afin que vous puissiez trouver celui qui deviendra votre signature.</p>
+    </div>
+    <div class="ap-img-placeholder">🏛️</div>
+  </section>
+
+  <section class="ap-universal">
+    <div class="container ap-univ-inner">
+      <div class="ap-img2-placeholder">💫</div>
+      <div class="ap-univ-text">
+        <h2>Une Sélection Universelle</h2>
+        <p>Chez ÉléganceParfumée, nous célébrons la diversité olfactive en proposant une gamme soigneusement sélectionnée pour tous les goûts et toutes les personnalités, sans distinction de genre.</p>
+        <p>Notre collection rassemble les plus belles fragrances féminines, masculines et unisexes, car nous croyons qu'un parfum doit avant tout correspondre à votre identité.</p>
+        <p>Nos experts vous guident à travers les familles olfactives — des floraux délicats aux boisés puissants — pour vous aider à trouver la fragrance qui vous ressemble.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-process container">
+    <h2>Notre Processus de Sélection</h2>
+    <p class="section-sub">Une expertise dédiée à vous proposer les meilleurs parfums du marché.</p>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Sélection des Marques d'Exception</h4><p>Nous collaborons avec des maisons de parfumerie renommées pour vous offrir des fragrances de grande qualité.</p></div></div>
+      <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Veille et Tendance</h4><p>Notre équipe suit les tendances du marché et identifie les nouveautés les plus prometteuses.</p></div></div>
+      <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Conseil Personnalisé</h4><p>Nous accompagnons chaque client dans son choix avec une approche sur mesure.</p></div></div>
+      <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Service & Fidélité</h4><p>Nous assurons un service après-vente de qualité et un programme de fidélité avantageux.</p></div></div>
+    </div>
+  </section>
+
+  <section class="ap-valeurs">
+    <div class="container">
+      <h2>Nos Valeurs</h2>
+      <p class="section-sub">Les principes qui guident chacune de nos actions</p>
+      <div class="valeurs-grid">
+        <div class="valeur-card"><div class="v-icon">✦</div><h4>Authenticité</h4><p>Tous nos parfums sont garantis 100% authentiques, sourcés directement auprès des marques officielles.</p></div>
+        <div class="valeur-card"><div class="v-icon">◈</div><h4>Conseil Expert</h4><p>Notre équipe vous guide pour trouver le parfum parfait, avec des recommandations personnalisées.</p></div>
+        <div class="valeur-card"><div class="v-icon">❋</div><h4>Service Premium</h4><p>Livraison rapide et soignée, emballage cadeau gratuit et service après-vente disponible 7j/7.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-cta">
+    <h2>Prêt à trouver votre signature olfactive ?</h2>
+    <p>Découvrez notre sélection exclusive de parfums de luxe et bénéficiez de conseils d'experts.</p>
+    <a href="produit.html" class="btn-primary">Explorer la Collection</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col"><h4>ÉléganceParfumée</h4><p>Maison de parfums de luxe depuis 2025</p></div>
+      <div class="footer-col"><h4>À propos</h4><p>Élégance Parfumée : luxe, performance et expérience utilisateur optimisée.</p><a href="apropos.html">En savoir plus →</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>Bd Khaled Khodja, Tizi Ouzou</p><p>Éléganceparfumée@gmail.com</p><p>+213 793 56 64 68</p></div>
+    </div>
+    <div class="footer-bottom">© 2025 Élégance Parfumée. Tous droits réservés.</div>
+  </footer>
+
+  <script src="projetdev.js"></script>
+</body>
+</html>
