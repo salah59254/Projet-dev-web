@@ -82,3 +82,54 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount();
 });
+// Charger le panier existant
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCartQty(button, name, price) {
+    const productCard = button.closest(".product-card");
+    const qty = parseInt(productCard.querySelector(".qty").textContent);
+
+    // Vérifier si le produit existe déjà
+    const existingProduct = cart.find(item => item.name === name);
+
+    if (existingProduct) {
+        existingProduct.quantity += qty;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: qty
+        });
+    }
+
+    // Sauvegarder dans localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Mettre à jour le compteur
+    updateCartCount();
+
+    alert(`${qty} × ${name} ajouté au panier !`);
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const totalItems = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
+
+    document.getElementById("cartCount").textContent = totalItems;
+}
+
+// Charger le compteur au démarrage
+document.addEventListener("DOMContentLoaded", updateCartCount);
+function changeQty(button, change) {
+    const qtyElement = button.parentElement.querySelector(".qty");
+    let qty = parseInt(qtyElement.textContent);
+
+    qty += change;
+
+    if (qty < 1) qty = 1;
+
+    qtyElement.textContent = qty;
+}
